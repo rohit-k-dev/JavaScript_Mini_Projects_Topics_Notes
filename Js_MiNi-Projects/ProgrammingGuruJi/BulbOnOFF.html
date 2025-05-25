@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On OFF</title>
+    <style>
+            body{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 100px;
+                flex-direction: column;
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+            }
+            .bulb{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 100px;
+                flex-direction: column;
+            }
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        .btn{
+            display: flex;
+            gap: 50px;
+        }
+    </style>
+</head>
+<body>
+
+        <div class="bulb">
+            <img id="img_On_Off" src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2795.png" alt="">
+            <div class="btn">
+                <button id="imgBulbOff" onclick="bulbOff()" type="button">OFF</button>
+                <button id="imgBulbOnn" onclick="bulbOnn()" type="button">ONN</button>
+            </div>
+           
+        </div>
+
+    <script>
+
+        function bulbOff(){
+                document.getElementById("img_On_Off").src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2795.png";
+            
+        }
+        function bulbOnn(){
+            document.getElementById("img_On_Off").src="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2793.png"
+
+            
+        }
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square And Cube</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+        <form action="">
+            <input type="text" name="" id="getNum">
+        <button onclick="Square()" type="button">Square</button>
+        <button onclick="Cube()" type="button">Cube</button>
+        <button onclick="Clear()" type="button">Clear</button>
+        <p>Square : <span id="getSqr"></span></p>
+        <p>Cube : <span id="getQb"></span></p>
+        <p>Clear : <span id="getClr"></span></p>
+        </form>
+
+    <script>
+        function Square (){ 
+                let getSQR = document.getElementById("getNum").value;
+               let getSqr = getSQR*getSQR
+              document.getElementById('getSqr').innerHTML = `${getSQR} = ${getSqr}`;
+            }
+        function Cube (){   
+            let getQb = document.getElementById("getNum").value;
+               let getQuBe = getQb*getQb*getQb
+              let f= document.getElementById('getQb').innerHTML = `${getQb} = ${getQuBe}`;
+            }
+        function Clear (){  
+            document.getElementById("getNum").value=" ";
+
+           let SqrData = document.getElementById('getSqr').innerHTML=" ";
+           let QbData = document.getElementById('getQb').innerHTML=" ";
+           let ClrData = document.getElementById("getClr").innerHTML = " Data Cleared ";
+
+
+            }
+        
+    </script>
+    
+</body>
+</html>

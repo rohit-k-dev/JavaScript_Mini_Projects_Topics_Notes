@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>	</title>
+</head>
+<body>
+
+
+<!-- Example----------------------- -->
+
+<input type="" id="inp" name="">
+<button id="bTn">DEL</button>
+<h1 id="h1"></h1>
+
+
+
+	<script>
+
+
+
+	let text = 'javaScript is A Scripting Language';
+	console.log(text);
+
+
+
+	// // <!-- SubString Methods -->
+
+	// // let SubStringText = text.substring(0);
+	// let SubStringText = text.substring(4,10);
+	// console.log(SubStringText);
+
+	// // <!-- Slice Methods -->
+
+	// // let SliceText = text.slice(0)
+	// let SliceText = text.slice(4,10)
+	// console.log(SliceText);
+
+
+
+
+// <!-- SubString Methods --> work
+
+	// let SubStringText = text.substring(-4,10);
+	// console.log(SubStringText);
+
+	// <!-- Slice Methods --> not work
+
+	// let SliceText = text.slice(-4,10)
+	// console.log(SliceText);
+
+
+
+
+ // <!-- SubString Methods --> work and read Small Value
+
+	// let SubStringText = text.substring(10,4);
+	// console.log(SubStringText);
+
+	// <!-- Slice Methods --> not work and read Small Value
+
+	// let SliceText = text.slice(10,4)
+	// console.log(SliceText);
+
+
+	
+
+
+	// let SubStringText = text.substring(0,text.length -10);
+	let SubStringText = text.substring(0,text.length -20);
+	console.log(SubStringText);
+
+
+
+	// example-------------------------
+
+		let DisPlay = document.getElementById("inp");
+		let DisPlayBTN = document.getElementById("bTn");
+		let DisPlayH1 = document.getElementById("h1");
+
+		DisPlayBTN.addEventListener('click',function(){
+			let currentText = DisPlay.value;
+			let showInH1 = DisPlay.value=currentText.substring(0,currentText.length-1);
+			h1.innerHTML = showInH1;
+		});
+
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>

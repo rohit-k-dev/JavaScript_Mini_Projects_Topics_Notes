@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Generate Two</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin: 40px auto;
+        font-size: 50px;
+      }
+      h2 {
+        text-align: right;
+        font-size: 36px;
+      }
+      .container-fluid {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container {
+        max-width: 500px;
+        width: 50%;
+        float: left;
+        margin: 0 auto;
+        border: none;
+        padding: 20px;
+      }
+      fieldset {
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid #cccccc;
+        font-size: 16px;
+      }
+      legend {
+        margin-left: 20px;
+        font-size: 20px;
+      }
+      input {
+        width: auto;
+        margin: 10px;
+        padding: 5px;
+        font-size: 18px;
+      }
+      h3 {
+        margin: 5px 0;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        text-align: center;
+      }
+      table td,
+      table th {
+        padding: 5px;
+        margin: 0;
+        border: 1px solid #000000;
+      }
+      table tr td:last-child {
+        text-align: right;
+      }
+      ul li {
+        padding: 5px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Yara Da Dhaba</h1>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="part1">
+          <fieldset>
+            <legend>Personal Information</legend>
+            Full Name: <input type="text" id="name" /> <br />
+
+            Your Email: <input type="text" id="email" /><br />
+            Your Mobile: <input type="text" id="mobile" /><br />
+          </fieldset>
+        </div>
+
+        <div class="part2">
+          <fieldset id="inputContainer">
+            <!-- <legend>Your Orders</legend> -->
+            <!-- Smosa (Rs. 10): <input type="text" id="smosa" /> <br />
+            Kachori (Rs. 12): <input type="text" id="kachori" /><br />
+            Vadapav (Rs. 60): <input type="text" id="vadapav" /><br />
+            Maggi (Rs. 50): <input type="text" id="maggi" /><br /> -->
+          </fieldset>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <fieldset>
+          <legend>Your Bill</legend>
+          <h3>Your Name:<span id="name2"></span></h3>
+          <h3>Email: <span id="email2"></span></h3>
+          <h3>Mobile: <span id="mobile2"></span></h3>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Menu</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amout</th>
+              </tr>
+            </thead>
+            <tbody id="bill">
+              <!-- <tr>
+                <td>Smosa</td>
+                <td>Rs. 10</td>
+                <td>1</td>
+                <td>10x1 = 10</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </fieldset>
+        <h2>Total Amout: Rs. <span id="amount">0</span></h2>
+      </div>
+    </div>
+
+    <script>
+
+        const menu ={
+          samosa : 15,
+          kachori : 20,
+          vadapav : 60,
+          vadapav : 60,
+          // mebbi : 50,
+          // burger : 40
+        }
+        const myOrders = {
+          // id
+          // samosa : 5,
+          
+        }
+        String.prototype.firstLetter = firstLetter;
+        // let nameE = "king of javascript";
+        // nameE.firstLetter();
+        function firstLetter(){
+            return this.slice(0,1).toUpperCase()+''+this.slice(1);
+        }
+
+        function renderDesign(){
+
+          let textField = "";
+
+        for(const x in menu){
+          // console.log(x);
+          // console.log(menu[x]);
+
+          textField += `${x.firstLetter()} (Rs. ${menu[x]}): <input type="text" id="${x}" /> <br />`
+
+          
+          
+        }
+        // console.log(textField);
+        textField += `<legend>Your Orders</legend>`
+        document.getElementById('inputContainer').innerHTML = textField;
+
+        }
+
+        function getOrder(){
+// console.log('getOrder');
+
+         const getInputAll = document.querySelectorAll('#inputContainer input');
+        //  console.log(getInputAll);
+
+          for(const ClearDataInput in myOrders){
+            delete myOrders[ClearDataInput]
+          };
+
+        getInputAll.forEach(element => {
+          // console.log(element.value)
+          const orderQuantity =parseInt( element.value);
+          // console.log(orderQuantity);
+          if(isNaN(orderQuantity) || orderQuantity == 0 || orderQuantity < 0){
+            //error
+          }else{
+            myOrders[element.id] = orderQuantity;
+          }
+
+          biilGenerate();
+
+          
+        });
+        //  console.log(getInputAll.value);
+        //  console.log(myOrders)
+
+
+        }
+
+        function biilGenerate (){
+          let textField_2 = '';
+          let Total = 0;
+          for(const x in myOrders){
+            let multi = menu[x] * myOrders[x];
+            Total = Total + multi;
+            textField_2 += `<tr>
+                <td>${x.firstLetter()}</td>
+                <td>Rs. ${menu[x]}</td>
+                <td>${myOrders[x]}</td>
+                <td>${menu[x]}x ${myOrders[x]} = ${multi}</td>
+              </tr>`
+
+          }
+          document.getElementById('amount').innerText = Total;
+          document.getElementById('bill').innerHTML = textField_2;
+        }
+
+        renderDesign();
+        document.getElementById('submit').addEventListener('click',()=>{
+          getOrder()
+        })
+
+        
+        
+
+
+    </script>
+
+  </body>
+</html>

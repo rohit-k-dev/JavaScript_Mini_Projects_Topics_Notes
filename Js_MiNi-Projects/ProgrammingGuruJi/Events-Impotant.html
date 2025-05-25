@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events ImporTant Topics</title>
+    <style>
+      body {
+        height: auto;
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 100px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--  OnMouseOver And OnMouseOut Events -->
+
+    <!--  this use for current value (x)-->
+
+     <img
+      src="https://assets.stickpng.com/thumbs/5a18857d8d421802430d2cf8.png"
+      alt=""
+      srcset=""
+      onmouseover="bigImage(this)"
+      onmouseout="SmallImage(this)"
+    />
+    <script>
+      function bigImage(x) {
+        x.style.width = "600px";
+        x.style.height = "600px";
+      }
+      function SmallImage(x) {
+        x.style.width = "300px";
+        x.style.height = "300px";
+      }
+
+    </script> 
+
+
+
+    <!--  Event OnBluer  -->
+
+      <!--  onblur Use Often Input Fields -->
+
+    
+
+ <input onblur="UpperCase()"   type="text" name="" id="nameUpperCase">
+<input onblur="LowerCase()"   type="text" name="" id="nameLowerCase">
+    <script>
+
+function UpperCase(){
+        let x = document.getElementById('nameUpperCase')
+        x.value = x.value.toUpperCase();
+    }
+    function LowerCase(){
+        let x = document.getElementById('nameLowerCase');
+        x.value = x.value.toLowerCase();
+    }
+
+    </script>
+
+
+
+
+    <!--  OnMouseOver And OnMouseOut Events -->
+
+    <!-- OnLoad  use for body element   -->
+
+
+     <img src="https://assets.stickpng.com/thumbs/5a18857d8d421802430d2cf8.png"
+    onload="imgLoaded()"
+    alt="" srcset="">
+
+    <script>
+
+        function imgLoaded(){
+            alert("Photo UpLoaded Successfully");
+        }
+        
+    </script> 
+
+
+
+
+<!-- OnError use for body element   -->
+        <!--  Use external Data And File -->
+
+<!--  Work When Data (Image Path Wrong ) -->
+
+<!-- Wrong  Path    -->
+
+<img src="goflel.png"
+  onerror="imgOnError()"
+alt="" srcset="">
+
+
+<!-- Right  Path -->
+
+<img src="https://assets.stickpng.com/thumbs/5a18857d8d421802430d2cf8.png"
+  onerror="imgOnError()"
+alt="" srcset="">
+
+<script>
+
+    function imgOnError(){
+        alert("Sorry ! Your Image Not Uploaded \n Check The Code")
+        
+    }
+    
+</script>
+
+
+
+
+
+
+  </body>
+</html>

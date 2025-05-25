@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    Enter No. <input type="text" name="number" id="number" />
+                <button type="button" onclick="cube()">Find Cube</button>
+                <p> Cube Of : <span  id="getCubeValue"></span></p>
+
+    <script>
+
+       function cube(){
+        let number=document.getElementById("number").value;
+        let cubeCreate = `${number*number*number}`
+        let getCubeValue = document.getElementById("getCubeValue").innerHTML=`${number} = ${cubeCreate}`;
+       }
+        
+    </script>
+    
+</body>
+</html>

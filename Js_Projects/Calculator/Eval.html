@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>	</title>
+
+</head>
+<body>
+
+
+<!-- // Example Eval -->
+
+	<h2 id="h2"></h2>
+	<input type="" id="inp" name="">
+	<button id="bTn">Result</button>
+
+
+	<script>
+		
+		// Eval 
+		// Inbuild Function
+
+		// Number :
+		let text = 10 + 10;
+		console.log(text);
+
+		// String :
+		let textt = "12 + 12";
+		console.log(textt);
+
+		// Eval Convert String TO Numbers
+		let TextEval = "14 + 14";
+		let result = eval(TextEval); 
+		console.log(result)
+
+
+		// Eval Convert String TO Numbers
+		let a = 30;
+		let b = 40;
+		let getNum = eval("a + b");
+		console.log(getNum)
+
+
+// Example Eval
+		let inp = document.querySelector("#inp");
+		let bTn = document.querySelector("#bTn");
+		let h2 = document.querySelector("#h2");
+		
+		bTn.addEventListener('click',function(){
+			let result = eval(inp.value);
+			// console.log(result);
+			h2.innerHTML = result;
+		});
+
+
+
+	</script>
+
+</body>
+</html>

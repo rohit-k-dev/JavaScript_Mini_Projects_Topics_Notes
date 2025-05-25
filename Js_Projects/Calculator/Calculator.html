@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CalCulaTor</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-weight: bold;
+			font-family: sans-serif;
+		}
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100vw;
+		}
+		#calculator{
+			width: 300px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			flex-direction: column;
+			border: 2px solid red;
+			padding: 10px;
+			border-radius: 7px;
+			border: 2px solid black;
+			border-radius: 0px 3px 15px rgba(0,0,0,0.8);
+			background: rgba(0, 0, 0, 0.5);
+
+		}	
+		#inpVal{
+			width: 100%;
+			height: 50px;
+			padding: 5px 7px;
+			font-size: 26px;
+			text-align: end;
+			border-radius: 7px;
+		}
+		#AllBTN{
+			display: flex;
+			flex-wrap:wrap;
+			gap:20px;
+			align-items: center;
+			justify-content: center;
+		}
+		span{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			line-height: 50px;
+			text-align: center;
+			color: white;
+			cursor: pointer;
+			transition: all 0.3s linear;
+			background: rgba(0, 0, 0, 0.7);
+
+		}
+		span:hover{
+			background: orangered;
+			color: white;
+		}
+#ac,
+#del,
+#per,
+#devid,
+#multiply,
+#minus,
+#addition,
+#equale{
+	color: #f67c14;
+	background: black;
+}
+
+
+
+	</style>
+</head>
+<body>
+
+
+	<div id="calculator">
+		<input id="inpVal" type="" name="" placeholder=00>
+		<div id="AllBTN">
+				<span class="operator" id="ac">AC</span>
+				<span class="operator" id="del">DEL</span>
+				<span class="operator" id="per">%</span>
+				<span class="operator" id="devid">/</span>
+				<span >7</span>
+				<span >8</span>
+				<span >9</span>
+				<span class="operator" id="multiply">*</span>
+				<span >4</span>
+				<span >5</span>
+				<span >6</span>
+				<span class="operator" id="minus">-</span>
+				<span >1</span>
+				<span >2</span>
+				<span >3</span>
+				<span class="operator" id="addition">+</span>
+				<span >00</span>
+				<span >0</span>
+				<span >.</span>
+				<span class="operator" id="equale">=</span>
+		</div>
+	</div>	
+
+
+<script>
+
+
+
+let getInput = document.getElementById("inpVal");    //console.log(getInput);
+	let getAllBTN = document.querySelectorAll("SPAN");    // console.log(getAllBTN);
+	
+	let BTNConVerTInArray = Array.from(getAllBTN);      // console.log(BTNConVerTInArray); 
+	let ConVerTStringToNO = ''
+	
+	BTNConVerTInArray.forEach((BTN)=>{
+		// console.log(BTN);
+
+	BTN.addEventListener('click',(e)=>{	
+	// console.log(e);  
+	// console.log(e.target);  
+	// console.log(e.target.tagName);
+	// console.log(e.target.innerHTML);
+
+	// ConVerTStringToNO = e.target.innerHTML;						// console.log(ConVerTStringToNO);
+	// ConVerTStringToNO = ConVerTStringToNO + e.target.innerHTML;	// console.log(ConVerTStringToNO);
+	// ConVerTStringToNO += e.target.innerHTML;						// console.log(ConVerTStringToNO);
+
+	// ConVerTStringToNO += e.target.innerHTML;
+	// getInput.value = ConVerTStringToNO;			
+
+
+
+	if(e.target.innerHTML === "DEL"){
+		ConVerTStringToNO = ConVerTStringToNO.substring(0 , ConVerTStringToNO.length-1)
+		getInput.value = ConVerTStringToNO;
+	}else if(e.target.innerHTML === "AC"){
+		ConVerTStringToNO = "";
+		getInput.value = ConVerTStringToNO;
+	}else if(e.target.innerHTML === "="){
+		ConVerTStringToNO = eval(ConVerTStringToNO);
+		getInput.value = ConVerTStringToNO;
+	}else{
+
+		ConVerTStringToNO += e.target.innerHTML;				// console.log(ConVerTStringToNO);
+		getInput.value = ConVerTStringToNO;
+	}
+	})
+	})
+
+
+
+
+
+
+
+
+
+// let getAllBTN = document.querySelectorAll("SPAN");     
+// 	let BTNConVerTInArray = Array.from(getAllBTN);       
+// 	let ConVerTStringToNO = ''
+// 	BTNConVerTInArray.forEach((BTN)=>{
+// 	BTN.addEventListener('click',(e)=>{	
+// 	if(e.target.innerHTML === "DEL"){
+// 		ConVerTStringToNO = ConVerTStringToNO.substring(0 , ConVerTStringToNO.length-1)
+// 		getInput.value = ConVerTStringToNO;
+// 	}else if(e.target.innerHTML === "AC"){
+// 		ConVerTStringToNO = "";
+// 		getInput.value = ConVerTStringToNO;
+// 	}else if(e.target.innerHTML === "="){
+// 		ConVerTStringToNO = eval(ConVerTStringToNO);
+// 		getInput.value = ConVerTStringToNO;
+// 	}else{
+// 		ConVerTStringToNO += e.target.innerHTML;								 
+// 		getInput.value = ConVerTStringToNO;
+// 	}
+// 	})
+// 	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+</script>	
+
+</body>
+</html>

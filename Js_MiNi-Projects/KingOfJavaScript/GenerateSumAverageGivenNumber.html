@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Sum , Average and Product by Given Numbers</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        table{
+            padding: 20px;
+        }
+        tr{
+            
+        }
+        th{
+            text-align: start;
+            margin-bottom: 10px;
+        }
+        th>input{
+            font-size: 22px;
+            padding-inline: 10px;
+            width: calc(100% - 20px);
+            margin-block: 20px;
+        }
+        td{
+            text-align: start;
+        }
+        td>input{
+            width: calc(100% - 40px);
+            margin-block: 10px;
+            padding: 5px 20px;
+
+        }
+        button{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+
+    <fieldset><legend align="center"> Lest Calculation </legend>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Add Numbers Separate with comma (ex. : 10,20,40)</th>
+            </tr>
+            <tr><th colspan="2"> <input type="text" name="" id="number"></th></tr>
+            <!-- <tr><th><button id="save">Save</button></th></tr> -->
+        </thead>
+        <tbody>
+            <tr><th>Sum : </th> <td><input id="sum" type="text" name="" disabled></td></tr>
+            <tr><th>Average : </th> <td><input id="average" type="text" name="" disabled></td></tr>
+            <tr><th>Product : </th> <td><input id="product" type="text" name="" disabled></td></tr>
+        </tbody>
+    </table>
+</fieldset>
+
+    
+    <script>
+
+        let NumInpField =  document.getElementById('number');
+        // let saveBtn =  document.getElementById('save');
+
+        // saveBtn.addEventListener('click',function(){
+        // keypress
+        // keydown
+        // input
+            NumInpField.addEventListener('input',function(){
+
+            let sum = 0;
+            let average = 0;
+            let product = 1;
+
+            let getNumValue = NumInpField.value;
+            // console.log(getNumValue)
+
+           getNumValue = getNumValue.replaceAll(" ","")
+        //    console.log(getNumValue)
+
+        let Arr = getNumValue.split(",");
+        console.log(Arr)
+
+        // use arrow function
+          let newArray =  Arr.map(item => {
+                return Number.parseFloat(item);
+            })
+            console.log(newArray);
+
+          let validNumberArray =  newArray.filter(itemM => {
+                return !(isNaN(itemM));
+            })
+            console.log(validNumberArray)
+
+           let forEachLoop =  validNumberArray.forEach(itemMM => {
+                sum = sum + itemMM;
+                product = product * itemMM;
+            });
+            console.log(forEachLoop);
+
+            average = sum / validNumberArray.length;
+
+            // if Value not 
+            if(validNumberArray.length == 0){
+                sum = 0;
+                average = 0;
+                product = 0;
+
+            }
+
+        let sumInpField =  document.getElementById('sum').value = sum ;
+        let averageInpField =  document.getElementById('average').value = average ;
+        let productInpField =  document.getElementById('product').value = product ;
+
+        })
+
+        
+
+
+
+        
+    </script>
+    
+
+</body>
+</html>

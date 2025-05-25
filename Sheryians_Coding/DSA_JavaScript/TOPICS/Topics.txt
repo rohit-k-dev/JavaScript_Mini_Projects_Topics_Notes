@@ -1,0 +1,339 @@
+
+
+-------------------> D.S.A ( DATA STRUCTURE ALGORITHM )WITH JAVASCRIPT TOPICS
+
+
+1.  ----------->BASIC LOGIC ON JS | Variable | Operator | Operation ON Operator
+
+                ----->Sum Of Two Numbers
+
+                    --Relation Between Integer And String
+
+                ----->Type Coercion
+
+                ----->Sum And Message
+
+                ----->Accept And Print The Answer
+
+                ----->Swap Two Variables via 3 Methods
+
+                    --Operator And Their Questions
+
+                        --Arithmetic (   +  -  *  %  /    )
+                        --Relational Operator (   <  >  <=  >=  !   )
+                        --Logical Operator (   &&   ||   )
+                        --Unary Operator (   ++   --     )
+
+                        Solve Problems :
+
+                --Math Functions
+                    --Math.round()
+                    --Math.ceil()
+                    --Math.floor()
+                    --Math.trUnc() // remove the decimals
+                    --Math.pow()
+                    --Math.sqrt()
+                    --Math.cbRt()
+                    --Math.abs()
+                    --Math.max()
+                    --Math.min()
+                    --Math.random()
+                    --toFixed()
+
+                --Math Problems
+                    
+                    ----->Calculate Area And Perimeter Of rectangle
+
+                    ----->Generate OTP
+
+                    ----->Area Of Triangle By heron's formula
+
+                    ----->Circumference Of Circle
+
+
+2.  ----------->CONDITIONAL STATEMENT
+
+                ----->Valid User
+
+                ----->Shop Discount
+
+                ----->BiJli Bill
+
+                ----->INR Denomination
+
+                ----->Ternary Operator | Switch And One Case Handling Multiple Values
+
+                ----->Nested Ternary Operator 
+
+                ----->Switch and One Case Handling Multiple Values  
+
+                    ----->Switch case can't handle float value because its precision issues 
+
+
+
+3.  ----------->Loops
+
+                ----->For Loop
+
+                    --Print n Hello worlds
+                    --One To n Numbers and vice versa
+                    --Sum Of n Natural Numbers and Factorial Of Number
+                    --Factory Of Number
+                    --Prime Number
+                
+                -----> Break and Continue
+
+                ----->While Loop
+
+                    --Sum Of Digit
+                    --Reverse Of Number
+                    --Strong Number
+
+                ----->Do-While Loop
+
+                    --Repeated Hello
+                    --SasTa Calculator
+                    --Guess The Number
+
+
+4.  ----------->Patter Programming
+
+                ----->Nested Loop
+
+                ----->Patter Questions
+
+
+5.  ----------->Array
+
+                ----->Introduction
+
+                ----->Fixed and Dynamic size array
+
+                   ----->Accept The Value From User And Assign in The Array
+
+                   ----->Sum Of Array's Element
+
+                   ----->Max Element From Array
+
+                   ----->Second Max Array From Array
+
+                   ----->Reverse The Array
+
+                   ----->All Zeroes to left and all ones to right
+
+
+6.  ----------->String
+
+                ----->Introduction of String
+
+                ----->Methods Of String
+
+                ----->Print Each Character on new line
+
+                ----->print in Reverse Order
+
+                ----->Check if String is palindrome or not
+
+                ----->Toggle Each Character
+
+                ----->Frequency of Each Character
+
+
+7.  ----------->
+
+                ----->class and objects
+
+                ----->constructor
+
+                ----->prototype objects
+
+                ----->This key word
+
+                ----->Design Problems
+
+
+8.  ----------->Advance Array Problems
+
+                ----->Left And Right Rotation By K Element
+
+                ----->Remove Duplicates From The Sorted Array
+
+                ----->Merge Sorted Array
+
+                ----->Best Time To By And Sell Stocks
+
+                ----->Sort The Color
+
+                ----->Maximum Sub Array | KadANe's algorithm
+
+                ----->Majority Element | Moor's voting algo
+
+                ----->Trapping Rain Water
+
+
+9.  ----------->Sorting Algo Part-1
+
+                ----->Bubble | Selection | Insertion
+
+
+0.  ----------->Sorting Algo Part-2
+
+                ----->Quick | Merge
+
+
+11. ----------->Cyclic Sort
+
+                ----->Missing Number
+
+                ----->Find All The Disappeared in Array
+
+                ----->First Positive Number
+
+
+--------------->Binary Search
+
+                ----->Binary Search
+
+                ----->Search Insert Position
+
+                ----->Search Allocation
+
+                ----->Search in Rotated Sorted Array
+
+                ----->Book Allocation
+
+                ----->KoKo Eating
+
+                ----->Threshold limit
+
+
+
+--------------->Hashing 
+
+                ----->Print The Frequency Of The Number
+
+                ----->Print The Unique Element
+
+                ----->Check If Sentence is Pangram
+
+                ----->Short The People
+
+                ----->Two Sum
+
+                ----->SubArray Sum Equal to K
+
+                ----->longest SubArray with Sum K
+
+                ----->Longest Consecutive Sequence
+
+
+--------------->LinkedList
+
+                ----->Implementation
+
+                ----->Design Linked List
+
+                ----->Middle Of The linked List
+
+                ----->LinkedList Cycle
+
+                ----->Reverse LinkedList
+
+                ----->Delete the Node in Linked-List
+
+                ----->Reverse Node in K-Group
+
+
+
+--------------->Queue and Stack
+
+                ----->Implementation of Stack and queue
+
+                ----->Valid Parenthesis
+
+                ----->Implement Stack Using Queue
+
+                ----->Implement Queue Using Stack
+
+                ----->Next Largest Element
+
+                ----->Largest Rectangle in histogram
+
+
+
+--------------->Recursion and backtracking
+
+                ----->Print n Hello Times
+
+                ----->Print 1-n Natural Number 
+
+                ----->Print n-1 Natural Number 
+
+                ----->Sum Of n Natural Number 
+
+                ----->Fact Of n Natural Number 
+
+                ----->Print The Sum Of Digit
+
+                ----->Fibonacci Series ( Both Version )
+
+                ----->Tower Of Hanoi
+
+                ----->JosePhoUs Problem
+
+                ----->Subset 
+
+                ----->Permutation
+
+                ----->Letter Combination Sum
+
+                ----->Combination Sum
+
+                ----->SuDoKu Solver
+
+
+
+--------------->Binary Tree
+
+                ----->Implementation
+
+                ----->DFS Traversals - Three Version
+
+                ----->Maximum Depth Of Binary Tree
+
+                ----->Symmetric Tree
+
+                ----->BFS Traversal
+
+                ----->Left View
+
+                ----->Top View
+
+                ----->LCA Common Ancestor
+
+                ----->Construct Binary Tree From Pre-order And in-order
+
+
+
+--------------->Binary Search Tree
+
+                ----->Valid Binary Search Tree
+
+                ----->KTH Smallest Element in BST
+
+                ----->Delete Nodes in BST
+
+
+--------------->GRAPH 
+
+                ----->Implementation
+
+                ----->BTS and DFS Traversal
+
+                ----->Cycle Detection
+
+                ----->Topological Sort
+
+                ----->Shortest Path Algo's
+
+

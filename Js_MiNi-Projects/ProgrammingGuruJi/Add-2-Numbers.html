@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add 2 Numbers</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            /* background-color: black; */
+            /* background-image: linear-gradient(to right, red , yellow); */
+            background-image: linear-gradient(45deg, yellow,red);
+        }
+        .addTwoNum{
+            width: 400px;
+            height: 300px;
+            /* background-color: red; */
+            background-image: linear-gradient(45deg, yellow ,red);
+            border-radius: 20px;
+            box-shadow: 2px 2px 30px black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            cursor: pointer;
+        }
+        .addTwoNum input{
+            padding: 10px 30px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            width: 300px;
+            color: black;
+        }
+        .addTwoNum button{
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            width: 300px;
+            color: green;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            word-spacing: 0px;
+            cursor: pointer;
+            
+        }
+        p{
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            width: 300px;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        span{
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="addTwoNum">
+    <p>Result : <span id="getInpVal"></span></p>
+    <input type="text" id="ClickOne">
+    <input type="text" id="ClickTwo">
+    <button type="button" onclick="addNumbers()" >Add Numbers</button>
+
+        </div>
+
+
+    <script>
+
+
+function addNumbers(){
+    // parsInt use to treat the value as integer
+    let inpOne = parseInt(document.getElementById('ClickOne').value);
+    let inpTwo = parseInt(document.getElementById('ClickTwo').value);
+    let addSumNum = inpOne+inpTwo;
+    document.getElementById('getInpVal').innerHTML=addSumNum;
+}
+
+
+        
+    </script>
+    
+</body>
+</html>

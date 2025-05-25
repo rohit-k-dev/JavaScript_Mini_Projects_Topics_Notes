@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table User InterFace</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <input type="text" name="" id="getNumInp"/>
+    <button onclick="myTable()"type="button">Make Table</button>
+
+    <script>
+
+        function myTable(){
+            let getInp = document.getElementById('getNumInp').value;
+            for(let i=1;i<=(getInp*10);i++)
+        {
+            if(i%getInp==0){
+               document.write(`${i}<br>`);
+            }
+        }
+        }
+        
+    </script>
+    
+</body>
+</html>

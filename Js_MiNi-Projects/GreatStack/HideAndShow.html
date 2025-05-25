@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show And Hide Password</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font CDN Remix -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #250057;
+        }
+        .inputBox{
+            background-color: #fff;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 5px;
+            position: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 10px 0;
+            border: 0;
+            outline: 0;
+            font-size: 24px;
+            color: #555;
+            border-radius: 5px;
+
+        }
+        #ShowPassWord{
+            padding: 10px 20px;
+            font-size: 22px;
+        }
+       
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        i{
+            font-size: 24px;
+            padding-inline: 20px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+        }
+        #HideEyeIcon{
+            display: none;
+        }
+        #ShowEyeIcon{
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="inputBox">
+    <input type="password" name="" id="ShowPassWord" placeholder="Password">
+    <div class="icon">
+        <i class="ri-eye-line" id="ShowEyeIcon"></i>
+    <i class="ri-eye-off-line" id="HideEyeIcon"></i>
+    </div>
+
+</div>
+
+    <script>
+
+        let ShowPassWord =document.getElementById('ShowPassWord')
+        let ShowEyeIcon = document.getElementById('ShowEyeIcon')
+        let HideEyeIcon = document.getElementById('HideEyeIcon')
+
+        ShowEyeIcon.onclick=function(){
+            if(ShowPassWord.type == "password"){
+                ShowPassWord.type = "text";
+                HideEyeIcon.style.display = 'block'
+
+            }else{
+                ShowPassWord.type = "password";
+                HideEyeIcon.style.display = 'none'
+
+
+
+
+
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

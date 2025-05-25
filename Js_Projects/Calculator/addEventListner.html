@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100%;
+			flex-direction: column;
+			gap: 30px;
+		}
+		#box{
+			width: 400px;
+			height: 200px;
+			background: red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 30px;
+			flex-direction: column;
+		}
+		#UnderBox{
+			background: yellow;
+			padding: 20px 70px;			
+
+		}
+		#button{
+			padding: 10px 30px;
+
+		}
+		button{
+cursor: pointer;
+		}
+
+
+
+		#BOX{
+			padding: 10px;
+			border-radius: 30px;
+			background-color: red;
+			width: 400px;
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			align-content: center;
+		}
+		#BOX img{
+			width: 120px;
+			border-radius: 30px;
+			height: 120px;
+			border: 2px solid white;
+			padding: 30px;
+			background: crimson;
+
+		}
+	</style>
+</head>
+<body>
+
+
+	<div id="box" class="HuHu">
+		Box
+		<span id="UnderBox">
+			<button id="button" class="MyButton">Click</button>
+			snap
+		</span>
+	</div>
+
+
+
+<!-- addEventListener Example -->
+		
+		<div id="BOX">
+			<img src="https://assets.stickpng.com/thumbs/5a18857d8d421802430d2cf8.png">
+			<img src="https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bbd7.png">
+			<img src="https://assets.stickpng.com/thumbs/5897a3f4cba9841eabab6145.png">
+			<img src="https://assets.stickpng.com/thumbs/5a1885508d421802430d2cf3.png">
+		</div>
+
+
+	<!-- addEventLinter in JavaSCript -->
+	<!-- Events (e) in JavaSCript -->
+	<!-- e.target in JavaSCript -->
+
+	<script>
+		
+
+
+		// All Code Have One Problem
+
+		// let ButtonQuery = document.querySelector("#button,BUTTON,.button");
+
+		// First Click
+
+		// ButtonQuery.onclick = function(){
+		// 	ButtonQuery.style.background = "green";
+		// 	alert('First Click....');
+		// }
+
+		// Second Click
+
+		// ButtonQuery.onclick = function(){
+		// 	ButtonQuery.style.background = "green";
+		// 	alert('Second Click....');
+		// }
+
+		// Third Click
+
+		// ButtonQuery.onclick = function(){
+		// 	ButtonQuery.style.background = "green";
+		// 	alert("Third Click....");
+		// }
+
+
+		// Here We Have No Problem
+
+
+
+// First Click
+
+		// let ButtonQuery = document.querySelector("#button,BUTTON,.button");
+
+		// ButtonQuery.addEventListener('click', function(){
+		// 	ButtonQuery.style.background = "crimson";
+		// 	alert('First Click....');
+		// })
+
+		// Second Click
+
+		// ButtonQuery.addEventListener('click', function(){
+		// 	ButtonQuery.style.background = "crimson";
+		// 	alert('Second Click....');
+		// })
+
+		// Third Click
+
+		// ButtonQuery.addEventListener('click', function(){
+		// 	ButtonQuery.style.background = "crimson";
+		// 	alert("Third Click....");
+		// })
+
+
+		// Event
+
+		// let ButtonQuery = document.querySelector("#button,BUTTON,.button");
+
+
+		// ButtonQuery.addEventListener('click', function(event){
+			// alert(event);
+			// console.log(event);
+		// })
+
+
+// get id button etc anything :
+
+		// get event :
+		// ButtonQuery.addEventListener('click', function(event){
+		// 	console.log(event.target);
+		// })
+
+		// Id Name :
+		// ButtonQuery.addEventListener('click', function(event){
+		// 	console.log(event.target.id);
+		// })
+
+		// Class-Name :
+		// ButtonQuery.addEventListener('click', function(event){
+			// console.log(event.target.className);
+		// })
+
+		// Tag Name :
+		// ButtonQuery.addEventListener('click', function(e){
+			// console.log(e.target.tagName);
+		// })
+
+		// innerHTML :
+		// ButtonQuery.addEventListener('click', function(event){
+		// 	console.log(event.target.innerHTML);
+		// })
+
+
+
+// box in variable
+
+
+		// let box = document.querySelector("#box");
+
+		// box.addEventListener('click',function(event){
+		// 	// console.log(event)
+		// 	// console.log(event.target)
+		// 	// console.log(event.target.className)
+		// 	// console.log(event.target.id)
+		// 	// console.log(event.target.tagName)
+		// });
+
+
+
+		// box.addEventListener('click',function(event){
+				
+		// 		if(event.target.tagName === "DIV"){
+		// 						console.log(event.target.tagName + " Clicked");
+		// 		}else if(event.target.tagName === "SPAN"){
+		// 						console.log(event.target.tagName + " Clicked");
+		// 		}else if(event.target.tagName === "BUTTON"){
+		// 						console.log(event.target.tagName + " Clicked");
+		// 		};
+
+		// });
+
+
+
+
+
+// <!-- addEventListener Example -->
+
+
+		let GetImgBOX = document.querySelector('#BOX');
+
+		GetImgBOX.addEventListener('click',function(ev){
+			// console.log(ev)
+			// console.log(ev.target)
+			// console.log(ev.target.tagName)
+
+			// ev.target.remove();
+
+
+			if(ev.target.tagName === "IMG"){
+			ev.target.remove();
+			}
+
+		})
+
+
+
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Program</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <!-- Leap Year Comes In 4 year  -->
+     <!-- 366 Days -->
+      <!-- 29 February -->
+
+
+      <h4> Leap Year : Dived By 4 Years and 400 Years</h4>
+      <!-- 2000-1600 -->
+
+      <input type="text" name="" id="leapYear" placeholder="Enter Year">
+      <span id="result"> <!-- This Year is Leap Year --> </span>
+
+      
+
+
+    <script>
+
+        let result = document.getElementById("result");
+        document.getElementById("leapYear").addEventListener("keyup",function(){
+            let Year = this.value;
+            // result.innerText = Year;
+            // 2024
+            // 1500
+
+            // First Way
+            if(Year%4 == 0){
+                if(Year%100 == 0){
+                    if(Year%400==0){
+                result.innerText = Year + ' this is leap year';
+                    }else{
+                result.innerText = Year + ' this is Not leap year';
+                    }
+                }else{
+                result.innerText = Year + ' this is leap year';
+            }
+
+            }else{
+                result.innerText = Year + ' this is Not leap year';
+            }
+
+
+        // second way
+        if(Year%4==0&&Year%100!=0||Year%400==0){
+            result.innerText = Year + ' this is leap year';
+        }else{
+            result.innerText = Year + ' this is Not leap year';
+        }
+
+    });
+        
+
+    </script>
+    
+</body>
+</html>

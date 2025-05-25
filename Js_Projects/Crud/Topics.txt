@@ -1,0 +1,52 @@
+
+
+*------------------------------------------w3schools------------------------------------------*
+
+for of loop
+for in loop
+forEach loop
+localStorage.getItem()
+localStorage.setItem()
+localStorage.removeItem
+JSON.parse()
+find()
+push()
+onsubmit()
+preventDefault()
+url (image url in javaScript)
+JSON.stringify()
+click()
+reset()
+slice()
+replace()
+replace(/"/g,"'")
+replace(/'/g,'"')
+async
+await
+onclick
+getAttribute()
+splice()
+onchange()
+new
+FileReader()
+readAsDataURL()
+onload()
+target
+result
+return new Promise((resolve, reject) => {}
+.then()
+oninput()
+toLowerCase()
+toLocaleLowerCase()
+indexOf()
+Number()
+toString()
+classList.add()
+classList.remove()
+classList.toggle()
+classList.contains()
+classList.entries()
+controlPrevAndNext()
+
+
+

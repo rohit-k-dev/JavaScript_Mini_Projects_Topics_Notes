@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Complete</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <!-- form Validation (redirect Other Page) -->
+     <!-- url path google browser -->
+
+
+     <!-- 111111111111111111111111111111111111111 -->
+
+      <!-- create html page for form Validation -->
+       <!-- return  onsubmit not onclick -->
+        <!-- action html file path -->
+         <!-- return false and else(default) true -->
+          <!-- fill all fields -->
+     
+     <form onsubmit=" return myData()" action="./FormVal_1_HtmlPage.html">
+        UserId : <input type="text" name="" id="userInpId"><br><br>
+        UserContact : <input type="text" name="" id="userInpContact"><br><br>
+        UserName : <input type="text" name="" id="userInpName"><br><br>
+        PassWord : <input type="password" name="" id="userInpKey" placeholder=" 6 Digit PassWord"><br><br>
+        ConFirm PassWord : <input type="password" name="" id="userConFirmInpKey" placeholder=" Confirm PassWord "><br><br>
+        <input type="submit" name="" id="" value="Submit Your Data">
+
+     </form>
+
+
+    <script>
+
+       function myData(){
+
+        let userInpIdGet = document.getElementById("userInpId").value;
+        let userInpContactGet =  document.getElementById("userInpContact").value;
+        let userGet = document.getElementById("userInpName").value;
+        let userPassGet =  document.getElementById("userInpKey").value;
+        let userConFirmPassGet =  document.getElementById("userConFirmInpKey").value;
+
+        if(userGet=="" || userPassGet=="" || userConFirmPassGet=="" || userInpIdGet=="" || userInpContactGet==""){
+            alert("All Field Are Mandatory")
+            return false;   //if error gives than run this line code
+        }
+        else if(userInpContactGet.length >10 || userInpContactGet.length<10){
+            alert("Number Should Be Of 10 Digits ! <br> Please Enter Valid No.")
+            return false;
+        }
+        // Use isNaN() Formula (is not a number)
+        else if(isNaN(userInpContactGet)){
+            alert("Only Numbers are Allows ! <br> Please Enter Valid No.")
+            return false;
+        }
+        else if(userPassGet.length < 6 || userPassGet.length > 10){
+            alert("PassWord  Length is Set To 6 Digits ")
+            return false;
+        }
+        else if(userPassGet != userConFirmPassGet ){
+            alert("Please Fill Same PassWord ")
+            return false;
+        }
+        else{
+            true;   //if error not gives than run this line code
+        }
+        // if one fields are Not filled then run if else if 
+        // if all fields are filled then run else 
+
+       }
+
+
+        
+    </script>
+
+
+
+
+
+
+
+<!-- 222222222222222222222222222222222222222 -->
+     <!-- 333333333333333333333333333333333333333 -->
+     <!-- 444444444444444444444444444444444444444 -->
+
+
+    
+</body>
+</html>

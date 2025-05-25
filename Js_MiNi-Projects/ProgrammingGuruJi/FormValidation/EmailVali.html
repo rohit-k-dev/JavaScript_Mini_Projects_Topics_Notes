@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Email Validation</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .hero{
+
+        }
+        .inputGroup{
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+        }
+        #EmailLabel{
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            left: 2px;
+            color: #777;
+            font-size: 18px;
+            transition: bottom 0.4s;
+        }
+        #EmailInpField{
+            display: block;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid red;
+            background-color: transparent;
+            outline: none;
+            font-size: 26px;
+            padding: 5px 2px;
+            position: relative;
+            z-index: 10;
+        }
+        #EmailError{
+            position: absolute;
+            top: 100%;
+            left: 2px;
+            font-size: 16px;
+            font-weight: 400;
+            color: red;
+            transition: top 0.5s;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- use this email on browser (rohit@gmail.com) -->
+     <!-- use onkeyup  -->
+
+    <div class="hero">
+        <div class="inputGroup">
+            <label id="EmailLabel" for="">Email</label>
+            <input id="EmailInpField" type="email" name="" id="" spellcheck="false" onkeyup="ValidateEmail()">
+           <span id="EmailError"><!--Error Message --></span> 
+        </div>
+    </div>
+
+    <script>
+
+let EmailLabel = document.getElementById('EmailLabel');
+let EmailInpField = document.getElementById('EmailInpField');
+let EmailError = document.getElementById('EmailError');
+
+function ValidateEmail(){
+    EmailLabel.style.bottom = "45px";
+
+    if(!EmailInpField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        EmailError.innerHTML = 'Please Enter a Valid Email';
+        EmailInpField.style.borderBottomColor = "orange";
+        EmailError.style.top = "120%";
+        return false;
+}else{
+    EmailError.innerHTML = "";
+    EmailInpField.style.borderBottomColor = "green";
+    EmailError.style.top = "100%";
+    return true;
+}
+
+    
+// /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+}
+
+
+
+// value not match given this format match( )
+        
+    </script>
+    
+</body>
+</html>

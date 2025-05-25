@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <style></style>
+  </head>
+  <body>
+
+    <form action="">
+
+      <!-- 121111111111111111111111111 -->
+
+
+      English : <input type="text" name="" id="English" /> 
+      Hindi : <input type="text" name="" id="Hindi" /> 
+      Science : <input type="text" name="" id="Science" /> 
+      Math : <input type="text" name="" id="Math" /> 
+      S.S.T. : <input type="text" name="" id="SST" />
+
+      <button type="button" onclick="checkResult()">Get ReSult</button> <br>
+
+      <p>Total Of Marks = <span id="getOutPutMarks"></span></p>
+      <p>Total Of Percentage = <span id="getOutPutPercent"></span></p>
+      <p>Check ReSult  = <span id="getOutPutReSult"></span></p>
+
+      <!-- 2222222222222222222222222   switch case -->
+      <br><br>
+      Put 1 For Total Marks and 2 For Percentage : 
+      <input type="text" name="" id="v1">
+      <span id="hhh">  </span>
+      <button type="button" onclick="checkResult()">Result status</button>
+
+    </form>
+
+    <script>
+
+        function checkResult (){
+          
+      // <!-- 121111111111111111111111111 -->
+
+                let English = parseInt( document.getElementById('English').value);
+                let Hindi = parseInt( document.getElementById('Hindi').value);
+                let Science = parseInt( document.getElementById('Science').value);
+                let Math = parseInt( document.getElementById('Math').value);
+                let SST = parseInt( document.getElementById('SST').value);
+
+                let totalMarks = English+Hindi+Science+Math+SST;
+                let getPercentage = totalMarks*100/500;
+
+                document.getElementById("getOutPutMarks").innerHTML = `${totalMarks } Marks`;
+                document.getElementById("getOutPutPercent").innerHTML = `${getPercentage} PerCenTage`;
+                
+                if(getPercentage>=60){
+                    document.getElementById('getOutPutReSult').innerHTML = `Congrats ! You Got Division First : ${getPercentage}`
+                }else if(getPercentage>=45){
+                    document.getElementById('getOutPutReSult').innerHTML = `Congrats ! You Got Division Second : ${getPercentage}`
+                }else if(getPercentage>=33){
+                    document.getElementById('getOutPutReSult').innerHTML = `Congrats ! You Got Division Third : ${getPercentage}`
+                }else{
+                    document.getElementById('getOutPutReSult').innerHTML = `Sorry ! You Are Fail : ${getPercentage}`
+                }
+
+
+                // <!-- 2222222222222222222222222 --> switch case 
+
+
+                let cmd = document.getElementById("v1").value;
+
+                switch(cmd){
+                  case '1':
+                    document.getElementById('hhh').innerHTML = "Total Marks = " + totalMarks;
+                  break;
+                  case '2':
+                    document.getElementById('hhh').innerHTML = "Percentage = " + getPercentage;
+                  break;
+                  default :
+                  document.getElementById('hhh').innerHTML="Invalid Data";
+                }
+
+
+        }
+
+    </script>
+  </body>
+</html>

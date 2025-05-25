@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-else-if Conditional StateMent</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    Age : <input type="text" name="" id="num1">
+    <button type="button" onclick="check()">Status Check</button>
+
+<script>
+
+
+function check(){
+let a = document.getElementById('num1').value;
+if(a<16){
+    document.write('Sorry ! You are Not Selected For Voting ' + a);
+}else if(a>16){
+    document.write('Congrats ! You are Selected For Voting ' + a);
+}else{
+    document.write(' Error ')
+}
+
+}
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure JavaScript Slider</title>
+    <style>
+        body{
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh; */
+        }
+        .sliderArea{
+             position: relative;   
+             width: 100%;
+        }
+
+        .slider{
+            position: relative;
+            width: 100%;
+        }
+
+        .slides{
+            width: 100%;
+            min-height: 500px;
+            border: 1px solid black;
+            display: none;
+            background-color: red;
+            color: white;
+
+
+        }
+        .slider :nth-child(2){
+            background-color: green;
+        }
+        .slider :nth-child(3){
+            background-color: yellow;
+            color: black;
+        }
+        .slider :nth-child(4){
+            background-color: gray;
+        }
+        .slider :nth-child(5){
+            background-color: cyan;
+            color: black;
+        }
+        h1{
+            text-align: center;
+            line-height: 500px;
+            font-size: 100px;
+        }
+        .active{
+            display: block;
+        }
+        .prev{
+            position: absolute;
+            left: 200px;
+            top: 50%;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border:2px solid black;
+            transition: all 1s linear;
+            background-color: cyan;
+
+        }
+        .next{
+            position: absolute;
+            right: 200px;
+            top: 50%;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border:2px solid black;
+            transition: all 1s linear;
+            background-color: cyan;
+
+        }
+        .prev:hover, .next:hover{
+            border: 2px solid transparent;
+        }
+        .indicators{
+            position: absolute;
+            top: 80%;
+            z-index: 2;
+            width: 100%;
+
+        }
+        .indicators ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        .indicators ul li {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            list-style: none;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        .indicators ul li.active{
+            background-color: black;
+            transition: all 0.5s linear;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="sliderArea">
+        <div class="slider">
+            <div class="slides active"><h1>1</h1></div>
+            <div class="slides"><h1>2</h1></div>
+            <div class="slides"><h1>3</h1></div>
+            <div class="slides"><h1>4</h1></div>
+            <div class="slides"><h1>5</h1></div>
+        </div>
+        <button id="prev" class="prev">Preview</button>
+        <button id="next" class="next">Next</button>
+        
+        <div class="indicators">
+            <ul id="ul">
+                <li class="active" onclick="GoSlides(0)" ></li>
+                <li class="" onclick="GoSlides(1)" ></li>
+                <li class="" onclick="GoSlides(2)" ></li>
+                <li class="" onclick="GoSlides(3)" ></li>
+                <li class="" onclick="GoSlides(4)" ></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+let slides = document.getElementsByClassName("slides");
+let ul = document.getElementById("ul");
+let IndDots = ul.getElementsByTagName("li");
+// get length 0,1,2,3,4,5 like this
+        let totalSlidesLength = slides.length;
+        let i;
+        let index=0;
+
+       
+// Next Button
+
+        let getNextBtn = document.getElementById("next");
+        getNextBtn.addEventListener("click",function(){
+            index += 1; //index = index+1
+            GoSlides (index)
+        })
+
+// Preview Button
+
+        let getPrevBtn = document.getElementById("prev");
+        getPrevBtn.addEventListener("click",function(){
+            index -= 1; //index = index+1
+            GoSlides (index)
+        })
+
+// auto slides
+
+setInterval(function (){
+    index += 1; //index = index+1
+    GoSlides (index)
+},1000)
+
+        function GoSlides (x){
+
+            if(x > totalSlidesLength-1){
+            index=0;
+        }
+        if(x<0){
+            index=totalSlidesLength-1;
+        }
+        if(x<totalSlidesLength && x>=0){
+                index=x;
+        }
+
+            for(i=0;i<totalSlidesLength;i++){
+                slides[i].classList.remove("active");
+                IndDots[i].classList.remove("active");
+            }
+            slides[index].classList.add("active");
+            IndDots[index].classList.add("active");
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>
